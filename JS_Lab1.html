@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Interactive Buttons</title>
+	<style>
+		body {
+			background-color: white;
+		}
+		h1 {
+			text-align: center;
+			font-size: 2em;
+			color: black;
+		}
+		.container {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+		}
+		button {
+			margin: 10px;
+			padding: 10px 20px;
+			border-radius: 5px;
+			font-size: 1.2em;
+			font-weight: bold;
+			color: white;
+			background-color: gray;
+			border: none;
+			cursor: pointer;
+		}
+		#button1 {
+			background-color: blue;
+		}
+		#button2 {
+			background-color: green;
+		}
+		#button3 {
+			background-color: blue;
+		}
+		#button4 {
+			background-color: green;
+		}
+		#button5 {
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<h1>Interactive Buttons</h1>
+	<div class="container">
+		<button id="button1" onclick="alert(x)">1st button</button>
+		<button id="button2" onclick="alert(y)">2nd button</button>
+		<button id="button3" onclick="document.body.style.backgroundColor = 'blue'">blue</button>
+		<button id="button4" onclick="document.body.style.backgroundColor = 'green'">green</button>
+		<button id="button5" onclick="alert('Reset Background Color'); document.body.style.backgroundColor = 'white'">Reset BG color</button>
+	</div>
+	<script>
+		var x, y;
+		x = parseInt(window.prompt('Enter first integer'));
+		y = parseInt(window.prompt('Enter second integer'));
+		if (x>y) {
+			document.body.style.backgroundColor = 'lightblue';
+			document.writeln('firstInput>secondInput');
+		}else if (x<y) {
+			document.body.style.backgroundColor = 'orange';
+			document.writeln('secondInput > firstInput');
+		}else{
+			document.body.style.backgroundColor = 'lightyellow';
+			document.writeln('secondInput == firstInput');
+		}
+	</script>
+</body>
+</html>
